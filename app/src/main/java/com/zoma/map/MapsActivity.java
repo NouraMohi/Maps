@@ -1,6 +1,7 @@
 package com.zoma.map;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.location.Criteria;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -62,9 +64,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private static final String TAG = "MapsActivity";
     private GoogleMap mMap;
+    private LocationRequest locationRequest;
     private double longitude;
     private double latitude;
-    private int REQ_LOC_CODE = 99;
+    private final int REQ_LOC_CODE = 99;
     private GoogleApiClient googleApiClient;
     private Marker currentLocationMarker;
     private Location location;
@@ -77,17 +80,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+        {
+            //Initializing googleApiClient
+            buildGoogleApiClient();
+            CheckLocationPermission();
+        }
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
-
         mapFragment.getMapAsync(this);
 
-        //Initializing googleApiClient
-        buildGoogleApiClient();
-        CheckLocationPermission();
 
-        LocationRequest locationRequest = LocationRequest.create();
+        locationRequest = LocationRequest.create();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest.setInterval(5 * 1000);
         locationRequest.setFastestInterval(2 * 1000);
@@ -97,6 +102,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //**************************
         builder.setAlwaysShow(true); //this is the key ingredient
         //**************************
+        //Initializing googleApiClient
 
         PendingResult<LocationSettingsResult> result =
                 LocationServices.SettingsApi.checkLocationSettings(googleApiClient, builder.build());
@@ -132,6 +138,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //getNeabyPlaces("restaurant");
         endLongitude = 31.27942934632301;
         endLatitude = 29.984261518516664;
+
+
+       /* Intent SearchIntent = new Intent(MapsActivity.this, MainActivity.class);
+        SearchIntent.putExtra("LAT",latitude);
+        SearchIntent.putExtra("LNG",longitude);
+        startActivity(SearchIntent);*/
     }
 
     @Override
@@ -139,11 +151,49 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            buildGoogleApiClient();
+            if(googleApiClient == null) {
+                //Initializing googleApiClient
+                buildGoogleApiClient();
+            }
             mMap.setMyLocationEnabled(true);
         }
         mMap.setOnMarkerClickListener(this);
         mMap.setOnMarkerDragListener(this);
+    }
+
+    protected synchronized void buildGoogleApiClient() {
+        googleApiClient = new GoogleApiClient.Builder(getApplicationContext())
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        googleApiClient.connect();
+    }
+
+    public boolean CheckLocationPermission() {
+        // Here, thisActivity is the current activity
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
+            // Should we show an explanation?
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION))
+            {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION} , REQ_LOC_CODE);
+            }
+            else
+            {
+                // No explanation needed, we can request the permission.
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION} , REQ_LOC_CODE);
+            }
+            // MY_PERMISSIONS_REQUEST_FINE_LOCATION is an
+            // app-defined int constant. The callback method gets the
+            // result of the request.
+            return false;
+        }
+        return true;
     }
 
     //Getting current location
@@ -338,40 +388,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMapLongClickListener(this);
     }
 
-    protected synchronized void buildGoogleApiClient() {
-        googleApiClient = new GoogleApiClient.Builder(getApplicationContext())
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .addApi(LocationServices.API)
-                .build();
-        googleApiClient.connect();
-    }
-
-    public boolean CheckLocationPermission() {
-        // Here, thisActivity is the current activity
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
-        {
-            // Should we show an explanation?
-            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION))
-            {
-
-                // Show an explanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
-                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION} , REQ_LOC_CODE);
-            }
-            else
-            {
-                // No explanation needed, we can request the permission.
-                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION} , REQ_LOC_CODE);
-            }
-            // MY_PERMISSIONS_REQUEST_FINE_LOCATION is an
-            // app-defined int constant. The callback method gets the
-            // result of the request.
-            return false;
-        }
-        return true;
-    }
 
     @Override
     public void onClick(View view) {
@@ -470,8 +486,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         getCompleteAddressString(latitude, longitude);
         */
+        getCurrentLocation();
         getRoad(endLongitude,endLatitude);
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch(requestCode)
+        {
+            case REQ_LOC_CODE:
+                if(grantResults.length > 0 && grantResults[0] ==  PackageManager.PERMISSION_GRANTED) {
+                    //permission is granted
+                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
+                    {
+                        if(googleApiClient == null)
+                        {
+                            buildGoogleApiClient();
+                        }
+                        mMap.setMyLocationEnabled(true);
+                    }
+                }
+                else
+                {
+                    Toast.makeText(this,"Permission Denied " , Toast.LENGTH_LONG).show();
+                    //this is to display a msg-->permission is denied
+                }
+                return;
+        }
+
+    }
+
+
 
 }
 
