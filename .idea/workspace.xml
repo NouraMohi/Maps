@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa7db57-2627-4d42-bda6-32886db3aa06" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/DataParser.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/DataParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/DownloadURL.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/DownloadURL.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/GetDirectionsData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/GetDirectionsData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/MapsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zoma/map/MapsActivity.java" />
     </list>
@@ -44,45 +39,47 @@
       <file leaf-file-name="MapsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zoma/map/MapsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="319" column="30" lean-forward="false" selection-start-line="319" selection-start-column="30" selection-end-line="319" selection-end-column="30" />
+            <state relative-caret-position="117">
+              <caret line="423" column="37" lean-forward="false" selection-start-line="423" selection-start-column="37" selection-end-line="423" selection-end-column="37" />
               <folding>
                 <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#4017#4045#0" expanded="false" />
-                <element signature="e#4813#4891#0" expanded="false" />
-                <element signature="e#4987#5044#0" expanded="false" />
+                <element signature="e#4074#4102#0" expanded="false" />
+                <element signature="e#4870#4948#0" expanded="false" />
+                <element signature="e#5044#5101#0" expanded="false" />
                 <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#7281#7347#0" expanded="false" />
-                <element signature="e#7903#7948#0" expanded="false" />
+                <element signature="e#7338#7404#0" expanded="false" />
+                <element signature="e#7960#8005#0" expanded="false" />
                 <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#8502#8527#0" expanded="false" />
+                <element signature="e#8559#8584#0" expanded="false" />
                 <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#12418#12492#0" expanded="false" />
+                <element signature="e#12494#12568#0" expanded="false" />
                 <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#13428#13493#0" expanded="false" />
-                <element signature="e#14229#14244#0" expanded="false" />
+                <element signature="e#13593#13658#0" expanded="false" />
+                <element signature="e#14394#14409#0" expanded="false" />
+                <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+                <element signature="e#15023#15109#0" expanded="false" />
                 <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#15662#15687#0" expanded="false" />
-                <element signature="e#16242#16298#0" expanded="false" />
+                <element signature="e#16093#16118#0" expanded="false" />
+                <element signature="e#16673#16729#0" expanded="false" />
                 <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#18075#18091#0" expanded="false" />
+                <element signature="e#18506#18522#0" expanded="false" />
                 <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-                <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+                <element signature="e#19407#19465#0" expanded="false" />
                 <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
                 <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-                <element signature="e#20754#20780#0" expanded="false" />
+                <element signature="e#21434#21460#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
               </folding>
             </state>
@@ -92,13 +89,12 @@
       <file leaf-file-name="GetDirectionsData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zoma/map/GetDirectionsData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+            <state relative-caret-position="32">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="2" selection-end-line="63" selection-end-column="11" />
               <folding>
                 <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
                 <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-                <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-                <element signature="e#1543#1590#0" expanded="false" />
+                <element signature="e#1606#1653#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -107,15 +103,14 @@
       <file leaf-file-name="DataParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zoma/map/DataParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="96" column="63" lean-forward="false" selection-start-line="96" selection-start-column="63" selection-end-line="96" selection-end-column="63" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#DataParser#0" expanded="false" />
                 <element signature="method#getDirection#0;class#DataParser#0" expanded="false" />
                 <element signature="method#getPlace#0;class#DataParser#0" expanded="false" />
                 <element signature="method#getPlaces#0;class#DataParser#0" expanded="false" />
                 <element signature="method#parse#0;class#DataParser#0" expanded="false" />
-                <element signature="method#parseDirections#0;class#DataParser#0" expanded="false" />
                 <element signature="method#getPaths#0;class#DataParser#0" expanded="false" />
                 <element signature="method#getPath#0;class#DataParser#0" expanded="false" />
               </folding>
@@ -141,6 +136,8 @@
       <find>polyline</find>
       <find>getDirectionsDa</find>
       <find>readUrl</find>
+      <find>onMarker</find>
+      <find>getCompleteAdd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1995,9 +1992,9 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/zoma/map/GetDirectionsData2.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zoma/map/MapsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zoma/map/DownloadURL.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zoma/map/DataParser.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zoma/map/MapsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zoma/map/GetDirectionsData.java" />
       </list>
     </option>
@@ -2281,7 +2278,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529169689912" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529181680889" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2329,7 +2326,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529169689913" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529181680889" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2491,7 +2488,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529169689915" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529181680891" />
       </method>
     </configuration>
     <list size="1">
@@ -2552,7 +2549,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22315036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06801909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.025059666" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2605,7 +2602,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2633,8 +2630,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2670,41 +2666,43 @@
           <caret line="412" column="5" lean-forward="false" selection-start-line="412" selection-start-column="5" selection-end-line="412" selection-end-column="5" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -2733,8 +2731,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2770,41 +2767,43 @@
           <caret line="412" column="5" lean-forward="false" selection-start-line="412" selection-start-column="5" selection-end-line="412" selection-end-column="5" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -2833,8 +2832,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2870,41 +2868,43 @@
           <caret line="412" column="5" lean-forward="true" selection-start-line="412" selection-start-column="5" selection-end-line="412" selection-end-column="5" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -2933,8 +2933,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2971,8 +2970,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2983,41 +2981,43 @@
           <caret line="393" column="13" lean-forward="true" selection-start-line="393" selection-start-column="13" selection-end-line="393" selection-end-column="13" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -3047,8 +3047,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3059,41 +3058,43 @@
           <caret line="70" column="44" lean-forward="false" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -3123,8 +3124,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3135,41 +3135,43 @@
           <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -3199,8 +3201,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3211,41 +3212,43 @@
           <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -3275,8 +3278,7 @@
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3287,41 +3289,43 @@
           <caret line="332" column="41" lean-forward="true" selection-start-line="332" selection-start-column="41" selection-end-line="332" selection-end-column="41" />
           <folding>
             <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
             <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
             <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
             <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
             <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
             <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
             <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
             <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
             <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
             <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
           </folding>
         </state>
@@ -3382,78 +3386,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zoma/map/MapsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="319" column="30" lean-forward="false" selection-start-line="319" selection-start-column="30" selection-end-line="319" selection-end-column="30" />
-          <folding>
-            <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#4017#4045#0" expanded="false" />
-            <element signature="e#4813#4891#0" expanded="false" />
-            <element signature="e#4987#5044#0" expanded="false" />
-            <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#7281#7347#0" expanded="false" />
-            <element signature="e#7903#7948#0" expanded="false" />
-            <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#8502#8527#0" expanded="false" />
-            <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#12418#12492#0" expanded="false" />
-            <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#13428#13493#0" expanded="false" />
-            <element signature="e#14229#14244#0" expanded="false" />
-            <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#15662#15687#0" expanded="false" />
-            <element signature="e#16242#16298#0" expanded="false" />
-            <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#18075#18091#0" expanded="false" />
-            <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerDragEnd#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
-            <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
-            <element signature="e#20754#20780#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zoma/map/DataParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="96" column="63" lean-forward="false" selection-start-line="96" selection-start-column="63" selection-end-line="96" selection-end-column="63" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#DataParser#0" expanded="false" />
             <element signature="method#getDirection#0;class#DataParser#0" expanded="false" />
             <element signature="method#getPlace#0;class#DataParser#0" expanded="false" />
             <element signature="method#getPlaces#0;class#DataParser#0" expanded="false" />
             <element signature="method#parse#0;class#DataParser#0" expanded="false" />
-            <element signature="method#parseDirections#0;class#DataParser#0" expanded="false" />
             <element signature="method#getPaths#0;class#DataParser#0" expanded="false" />
             <element signature="method#getPath#0;class#DataParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zoma/map/MapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="423" column="37" lean-forward="false" selection-start-line="423" selection-start-column="37" selection-end-line="423" selection-end-column="37" />
+          <folding>
+            <element signature="method#onCreate#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#4074#4102#0" expanded="false" />
+            <element signature="e#4870#4948#0" expanded="false" />
+            <element signature="e#5044#5101#0" expanded="false" />
+            <element signature="method#onMapReady#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#buildGoogleApiClient#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#CheckLocationPermission#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#7338#7404#0" expanded="false" />
+            <element signature="e#7960#8005#0" expanded="false" />
+            <element signature="method#getCurrentLocation#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#8559#8584#0" expanded="false" />
+            <element signature="method#getNeabyPlaces#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#getNearByUrl#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#getCompleteAddressString#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#12494#12568#0" expanded="false" />
+            <element signature="method#getRoad#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#getDistance#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#13593#13658#0" expanded="false" />
+            <element signature="e#14394#14409#0" expanded="false" />
+            <element signature="method#getDirection#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#15023#15109#0" expanded="false" />
+            <element signature="method#getDirectionUrl#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#getWalkingDirections#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#16093#16118#0" expanded="false" />
+            <element signature="e#16673#16729#0" expanded="false" />
+            <element signature="method#moveMap#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#onConnectionSuspended#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#onConnectionFailed#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#onMapLongClick#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#18506#18522#0" expanded="false" />
+            <element signature="method#onMarkerDragStart#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#onMarkerDrag#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#19407#19465#0" expanded="false" />
+            <element signature="method#onStart#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#onStop#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#onMarkerClick#0;class#MapsActivity#0" expanded="false" />
+            <element signature="method#onLocationChanged#0;class#MapsActivity#0" expanded="false" />
+            <element signature="e#21434#21460#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MapsActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zoma/map/GetDirectionsData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+        <state relative-caret-position="32">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="2" selection-end-line="63" selection-end-column="11" />
           <folding>
             <element signature="docComment;class#GetDirectionsData#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#GetDirectionsData#0" expanded="false" />
-            <element signature="e#1543#1590#0" expanded="false" />
+            <element signature="e#1606#1653#0" expanded="false" />
           </folding>
         </state>
       </provider>

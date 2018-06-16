@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.test.suitebuilder.annotation.LargeTest;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -30,10 +31,9 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
     GoogleMap mMap;
     String url;
     String duration,distance;
-    LatLng latlng;
-    Polyline line;
-    List<Polyline> polyLines;
-
+    Polyline polyLine;
+    List<LatLng> points;
+    PolylineOptions options;
 
     @Override
     protected String doInBackground(Object... objects) {
@@ -58,12 +58,16 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
 //                this.getPolyLines().get(0).remove();
 //            }
 //        }
-            String[] directionsList;
-            DataParser parser = new DataParser();
-            directionsList = parser.parseDirections(s);
-            this.setDistance(parser.getDistance());
-            this.setDuration(parser.getDuration());
-            displayDirection(directionsList);
+//        if(polyLine != null)
+//        {
+//            mMap.clear();
+//        }
+        String[] directionsList;
+        DataParser parser = new DataParser();
+        directionsList = parser.parseDirections(s);
+        this.setDistance(parser.getDistance());
+        this.setDuration(parser.getDuration());
+        displayDirection(directionsList);
 
         /*distance = directionsList.get("distance");
         duration = directionsList.get("duration");
@@ -78,21 +82,21 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
         markerOptions.snippet(distance + " " + duration);
 
         mMap.addMarker(markerOptions);*/
-
     }
 
     public void displayDirection(String[] directionsList) {
         int count = directionsList.length;
         for(int i = 0 ; i < count ; i++)
         {
-            PolylineOptions options = new PolylineOptions();
+            options = new PolylineOptions();
             options.color(Color.CYAN);
             options.width(10);
             options.addAll(PolyUtil.decode(directionsList[i]));
-
-            mMap.addPolyline(options);
+            polyLine = mMap.addPolyline(options);
+            points = polyLine.getPoints();
         }
     }
+
 
     public void setDistance(String d)
     {

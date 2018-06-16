@@ -40,6 +40,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 
 import java.io.BufferedReader;
@@ -73,7 +74,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private double endLatitude, endLongitude;
     private int proximityRadius = 10000;
     private String Address;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -219,7 +219,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             //ReverseGecoding rg = new ReverseGecoding(this.getApplicationContext());
             Address = getCompleteAddressString(latitude, longitude);
         }
-        getRoad(endLongitude,endLatitude);
+        getRoad(longitude,latitude,endLongitude,endLatitude);
     }
 
     public String getNeabyPlaces(String type) {
@@ -287,13 +287,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return strAdd;
     }
 
-    public void getRoad(double newLongitude, double newLatitude) {
+    public void getRoad(double longitude, double latitude,double newLongitude, double newLatitude) {
         //move to current position
         moveMap(newLongitude,newLatitude);
-        getDistance(newLongitude,newLatitude);
+        getDistance(longitude , latitude,newLongitude,newLatitude);
     }
 
-    public void getDistance(final double newLongitude,final double newLatitude) {
+    public void getDistance(double longitude, double latitude,final double newLongitude,final double newLatitude) {
 //        final Button button = findViewById(R.id.search_button);
 //        button.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
@@ -308,25 +308,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(markerOptions);
 //            }
 //        });
-        getDirection(newLongitude,newLatitude);
+        getDirection(longitude,latitude,newLongitude,newLatitude);
         //getWalkingDirections();
     }
 
-    public void getDirection(double newLongitude, double newLatitude) {
+    public void getDirection(double longitude, double latitude,double newLongitude, double newLatitude) {
         Object[] dataTransfer = new Object[3];
-        String url = getDirectionUrl();
+        String url = getDirectionUrl(longitude,latitude,newLongitude,newLatitude);
         GetDirectionsData getDirectionsData = new GetDirectionsData();
         dataTransfer[0] = mMap;
         dataTransfer[1] = url;
         dataTransfer[2] = new LatLng(newLatitude,newLongitude);
         getDirectionsData.execute(dataTransfer);
-        Toast.makeText(this,getDirectionsData.getDistance() + " " + getDirectionsData.getDuration(),  Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,getDirectionsData.polyLine + "***",  Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,getDirectionsData.getDistance() + " " + getDirectionsData.getDuration(),  Toast.LENGTH_SHORT).show();
     }
 
-    public String getDirectionUrl() {
+    public String getDirectionUrl(double longitude, double latitude,double newLongitude, double newLatitude) {
         StringBuilder googleDirectionsUrl = new StringBuilder("https://maps.googleapis.com/maps/api/directions/json?");
         googleDirectionsUrl.append("origin="+latitude+","+longitude);
-        googleDirectionsUrl.append("&destination="+endLatitude+","+endLongitude);
+        googleDirectionsUrl.append("&destination="+newLatitude+","+newLongitude);
         googleDirectionsUrl.append("&key=AIzaSyC0fz9lVvVgPgnZbvHcqWvBjKmPKPuEBFA");//
         return googleDirectionsUrl.toString();
     }
@@ -422,13 +423,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMarkerDragEnd(Marker marker) {
         // getting the Co-ordinates
-        endLatitude = marker.getPosition().latitude;
-        endLongitude = marker.getPosition().longitude;
-        Toast.makeText(MapsActivity.this, "onMarkerDragEnd" + endLongitude + " " + endLatitude, Toast.LENGTH_SHORT).show();
+        latitude = marker.getPosition().latitude;
+        longitude = marker.getPosition().longitude;
+        Toast.makeText(MapsActivity.this, "onMarkerDragEnd  --> " + getCompleteAddressString(latitude,longitude), Toast.LENGTH_SHORT).show();
 
         //move to current position
-        moveMap(endLongitude,endLatitude);
-        getRoad(endLongitude,endLatitude);
+
+        moveMap(longitude,latitude);
+        getRoad(longitude,latitude,endLongitude,endLatitude);
+//        PolylineOptions options = new PolylineOptions();
+//        options.color(Color.CYAN);
+//        options.width(10);
+//        options.add(new LatLng(endLatitude,endLongitude));
+//        mMap.addPolyline(options);
     }
 
     @Override
@@ -485,7 +492,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //           getRoad(endLongitude,endLatitude);
 //       }
         getCurrentLocation();
-        getRoad(endLongitude,endLatitude);
+        getRoad(longitude,latitude,endLongitude,endLatitude);
+
     }
 
     @Override
@@ -515,4 +523,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 }
+
 
