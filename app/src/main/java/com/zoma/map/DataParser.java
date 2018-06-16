@@ -98,7 +98,7 @@ public class DataParser {
         JSONArray jsonArr = null;
         JSONObject jsonObj ;
         try {
-            Log.d("Places", "parse");//
+            Log.d("Places", "parse");
             jsonObj = new JSONObject(jsonData);
             jsonArr = jsonObj.getJSONArray("results");
             getDirection(jsonArr);
@@ -109,18 +109,18 @@ public class DataParser {
     }
 
     public String[] parseDirections(String jsonData) {
-        JSONArray jsonArr = null;
+        JSONArray jsonArrSteps = null;
         JSONObject jsonObj ;
         try
         {
-            Log.d("Directions", "parse");//
-            jsonObj = new JSONObject((String)jsonData);
-            jsonArr = jsonObj.getJSONArray("routes").getJSONObject(0).getJSONArray("legs").getJSONObject(0).getJSONArray("steps");
+            Log.d("Directions", "parse");
+            jsonObj = new JSONObject(jsonData);
+            jsonArrSteps = jsonObj.getJSONArray("routes").getJSONObject(0).getJSONArray("legs").getJSONObject(0).getJSONArray("steps");
         } catch (JSONException e) {
             e.printStackTrace();
         }
         //return getDirection(jsonArr);
-        return getPaths(jsonArr);
+        return getPaths(jsonArrSteps);
     }
 
     public String[] getPaths(JSONArray googleStepsJson) {

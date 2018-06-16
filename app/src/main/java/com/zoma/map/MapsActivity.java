@@ -40,8 +40,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -74,6 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private double endLatitude, endLongitude;
     private int proximityRadius = 10000;
     private String Address;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,9 +136,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         //getNeabyPlaces("restaurant");
-        endLongitude = 31.27942934632301;
         endLatitude = 29.984261518516664;
-
+        endLongitude = 31.27942934632301;
 
        /* Intent SearchIntent = new Intent(MapsActivity.this, MainActivity.class);
         SearchIntent.putExtra("LAT",latitude);
@@ -209,7 +208,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-
         location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
         if (location != null) {
             //Getting longitude and latitude
@@ -221,6 +219,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             //ReverseGecoding rg = new ReverseGecoding(this.getApplicationContext());
             Address = getCompleteAddressString(latitude, longitude);
         }
+        getRoad(endLongitude,endLatitude);
     }
 
     public String getNeabyPlaces(String type) {
@@ -285,7 +284,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             //Log.w("My Current location address", "Cannot get Address!");
         }
 
-        getRoad(endLongitude,endLatitude);
         return strAdd;
     }
 
@@ -295,22 +293,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         getDistance(newLongitude,newLatitude);
     }
 
-    public void getDistance(double newLongitude, double newLatitude) {
-        final Button button = findViewById(R.id.search_button);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(new LatLng(endLatitude,endLongitude));
-                markerOptions.title("Your Destination ;)");
-                markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
-
-                float[] results = new float[10];
-                Location.distanceBetween(longitude,latitude,endLongitude,endLatitude,results);
-                markerOptions.snippet("Distance = "+results[0]);
-                Toast.makeText(MapsActivity.this, "Distance = "+results[0] + "*****" , Toast.LENGTH_SHORT).show();
-                mMap.addMarker(markerOptions);
-            }
-        });
+    public void getDistance(final double newLongitude,final double newLatitude) {
+//        final Button button = findViewById(R.id.search_button);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(new LatLng(newLatitude,newLongitude));
+        markerOptions.title("Your Destination ;)");
+        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+        float[] results = new float[10];
+        Location.distanceBetween(longitude,latitude,newLongitude,newLatitude,results);
+        markerOptions.snippet("Distance = "+results[0]/1000);
+        Toast.makeText(MapsActivity.this, "Distance = "+results[0]/1000 + " Meters" , Toast.LENGTH_SHORT).show();
+        mMap.addMarker(markerOptions);
+//            }
+//        });
         getDirection(newLongitude,newLatitude);
         //getWalkingDirections();
     }
@@ -321,7 +318,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         GetDirectionsData getDirectionsData = new GetDirectionsData();
         dataTransfer[0] = mMap;
         dataTransfer[1] = url;
-        dataTransfer[2] = new LatLng(endLatitude,endLongitude);
+        dataTransfer[2] = new LatLng(newLatitude,newLongitude);
         getDirectionsData.execute(dataTransfer);
         Toast.makeText(this,getDirectionsData.getDistance() + " " + getDirectionsData.getDuration(),  Toast.LENGTH_SHORT).show();
     }
@@ -375,7 +372,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions()
                 .position(myLoc)
                 .draggable(true)
-                .title(Address))
+                .title(getCompleteAddressString(lat,longi)))
                 .setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(myLoc));
         mMap.getUiSettings().setZoomControlsEnabled(true);
@@ -409,7 +406,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapLongClick(LatLng latLng) {
         // mMap.clear();
-        mMap.addMarker(new MarkerOptions().position(latLng).draggable(true));
+        //mMap.addMarker(new MarkerOptions().position(latLng).draggable(true));
     }
 
     @Override
@@ -431,11 +428,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //move to current position
         moveMap(endLongitude,endLatitude);
-        getDistance(endLongitude,endLatitude);
-        /*Polyline line = mMap.addPolyline(new PolylineOptions()
-                .add(new LatLng(latitude,longitude), new LatLng(endLatitude, endLongitude))
-                .width(5)
-                .color(Color.RED));*/
+        getRoad(endLongitude,endLatitude);
     }
 
     @Override
@@ -455,6 +448,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         marker.setDraggable(true);
         marker.showInfoWindow();
         marker.setTitle(Address);
+        currentLocationMarker = marker;
         Toast.makeText(MapsActivity.this, "onMarkerClick", Toast.LENGTH_SHORT).show();
         return true;
     }
@@ -483,6 +477,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         getCompleteAddressString(latitude, longitude);
         */
+//       if(!locationFlag)
+//       {
+//           getCurrentLocation();
+//           previousLocation = new LatLng(latitude,longitude);
+//           locationFlag = true;
+//           getRoad(endLongitude,endLatitude);
+//       }
         getCurrentLocation();
         getRoad(endLongitude,endLatitude);
     }

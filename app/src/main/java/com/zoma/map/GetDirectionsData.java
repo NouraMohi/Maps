@@ -13,6 +13,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.io.IOException;
@@ -30,6 +31,8 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
     String url;
     String duration,distance;
     LatLng latlng;
+    Polyline line;
+    List<Polyline> polyLines;
 
 
     @Override
@@ -50,12 +53,17 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
     @Override
     protected void onPostExecute(String s) {
         //HashMap<String,String> directionsList = null;
-        String[] directionsList;
-        DataParser  parser = new DataParser();
-        directionsList = parser.parseDirections(s);
-        this.setDistance(parser.getDistance());
-        this.setDuration(parser.getDuration());
-        displayDirection(directionsList);
+//        if (this.getPolyLines() != null) {
+//            for (int i = 0; i < polyLines.size(); i++) {
+//                this.getPolyLines().get(0).remove();
+//            }
+//        }
+            String[] directionsList;
+            DataParser parser = new DataParser();
+            directionsList = parser.parseDirections(s);
+            this.setDistance(parser.getDistance());
+            this.setDuration(parser.getDuration());
+            displayDirection(directionsList);
 
         /*distance = directionsList.get("distance");
         duration = directionsList.get("duration");
@@ -70,6 +78,7 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
         markerOptions.snippet(distance + " " + duration);
 
         mMap.addMarker(markerOptions);*/
+
     }
 
     public void displayDirection(String[] directionsList) {
@@ -84,7 +93,6 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
             mMap.addPolyline(options);
         }
     }
-
 
     public void setDistance(String d)
     {

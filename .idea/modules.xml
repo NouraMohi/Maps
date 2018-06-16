@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MAP.iml" filepath="$PROJECT_DIR$/MAP.iml" />
       <module fileurl="file://E:\Noura\Materials\GP\MAP\Maps\MAP.iml" filepath="E:\Noura\Materials\GP\MAP\Maps\MAP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Maps.iml" filepath="$PROJECT_DIR$/Maps.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

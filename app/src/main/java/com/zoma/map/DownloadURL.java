@@ -33,10 +33,10 @@ public class DownloadURL {
                 sb.append(line);
             }
             data = sb.toString();
-            Log.d("downloadUrl", data.toString());//
+            Log.d("downloadUrl", data.toString());
             br.close();
         } catch (IOException e) {
-            Log.d("Exception", e.toString());//
+            Log.d("Exception", e.toString());
             e.printStackTrace();
         }
         finally
