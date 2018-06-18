@@ -19,6 +19,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -34,6 +35,7 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
     Polyline polyLine;
     List<LatLng> points;
     PolylineOptions options;
+    List<Polyline> polyLines = new ArrayList<Polyline>();
 
     @Override
     protected String doInBackground(Object... objects) {
@@ -52,16 +54,8 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
 
     @Override
     protected void onPostExecute(String s) {
-        //HashMap<String,String> directionsList = null;
-//        if (this.getPolyLines() != null) {
-//            for (int i = 0; i < polyLines.size(); i++) {
-//                this.getPolyLines().get(0).remove();
-//            }
-//        }
-//        if(polyLine != null)
-//        {
-//            mMap.clear();
-//        }
+
+
         String[] directionsList;
         DataParser parser = new DataParser();
         directionsList = parser.parseDirections(s);
@@ -84,6 +78,16 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
         mMap.addMarker(markerOptions);*/
     }
 
+    public void removePolyLine()
+    {
+        this.cancel(true);
+            for (int i = 0; i < polyLines.size(); i++) {
+                polyLines.get(i).remove();
+            }
+            polyLines.clear();
+            polyLines = new ArrayList<Polyline>();
+    }
+
     public void displayDirection(String[] directionsList) {
         int count = directionsList.length;
         for(int i = 0 ; i < count ; i++)
@@ -94,9 +98,9 @@ public class GetDirectionsData extends AsyncTask<Object,String,String> {
             options.addAll(PolyUtil.decode(directionsList[i]));
             polyLine = mMap.addPolyline(options);
             points = polyLine.getPoints();
+            polyLines.add(polyLine);
         }
     }
-
 
     public void setDistance(String d)
     {

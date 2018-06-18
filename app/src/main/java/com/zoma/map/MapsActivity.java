@@ -10,6 +10,7 @@ import android.location.Criteria;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,6 +21,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -40,6 +42,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 
@@ -48,7 +51,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -70,10 +75,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private final int REQ_LOC_CODE = 99;
     private GoogleApiClient googleApiClient;
     private Marker currentLocationMarker;
+    private Marker victimLocationMarker;
     private Location location;
     private double endLatitude, endLongitude;
     private int proximityRadius = 10000;
     private String Address;
+    GetDirectionsData getDirectionsData = new GetDirectionsData();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +145,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //getNeabyPlaces("restaurant");
         endLatitude = 29.984261518516664;
         endLongitude = 31.27942934632301;
+        final Button button = findViewById(R.id.search_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TextView searchData = findViewById(R.id.editText);
 
+            }
+           });
        /* Intent SearchIntent = new Intent(MapsActivity.this, MainActivity.class);
         SearchIntent.putExtra("LAT",latitude);
         SearchIntent.putExtra("LNG",longitude);
@@ -289,7 +302,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void getRoad(double longitude, double latitude,double newLongitude, double newLatitude) {
         //move to current position
-        moveMap(newLongitude,newLatitude);
+        //moveMap(newLongitude,newLatitude);
         getDistance(longitude , latitude,newLongitude,newLatitude);
     }
 
@@ -305,7 +318,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Location.distanceBetween(longitude,latitude,newLongitude,newLatitude,results);
         markerOptions.snippet("Distance = "+results[0]/1000);
         Toast.makeText(MapsActivity.this, "Distance = "+results[0]/1000 + " Meters" , Toast.LENGTH_SHORT).show();
-        mMap.addMarker(markerOptions);
+        if(victimLocationMarker != null)
+        {
+            victimLocationMarker.remove();
+        }
+        victimLocationMarker = mMap.addMarker(markerOptions);
 //            }
 //        });
         getDirection(longitude,latitude,newLongitude,newLatitude);
@@ -315,10 +332,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void getDirection(double longitude, double latitude,double newLongitude, double newLatitude) {
         Object[] dataTransfer = new Object[3];
         String url = getDirectionUrl(longitude,latitude,newLongitude,newLatitude);
-        GetDirectionsData getDirectionsData = new GetDirectionsData();
         dataTransfer[0] = mMap;
         dataTransfer[1] = url;
         dataTransfer[2] = new LatLng(newLatitude,newLongitude);
+        getDirectionsData.removePolyLine();
+        getDirectionsData = new GetDirectionsData();
         getDirectionsData.execute(dataTransfer);
         //Toast.makeText(this,getDirectionsData.polyLine + "***",  Toast.LENGTH_SHORT).show();
         //Toast.makeText(this,getDirectionsData.getDistance() + " " + getDirectionsData.getDuration(),  Toast.LENGTH_SHORT).show();
@@ -369,12 +387,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
          * adding marker to map
          * move the camera with animation
          */
+
         LatLng myLoc = new LatLng(lat, longi);
-        mMap.addMarker(new MarkerOptions()
-                .position(myLoc)
-                .draggable(true)
-                .title(getCompleteAddressString(lat,longi)))
-                .setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+        MarkerOptions markerOpts = new MarkerOptions();
+        markerOpts.position(myLoc);
+        markerOpts.draggable(true);
+        markerOpts.title(getCompleteAddressString(lat,longi));
+        markerOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+        currentLocationMarker = mMap.addMarker(markerOpts);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(myLoc));
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setRotateGesturesEnabled(true);
@@ -423,13 +443,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMarkerDragEnd(Marker marker) {
         // getting the Co-ordinates
-        latitude = marker.getPosition().latitude;
-        longitude = marker.getPosition().longitude;
-        Toast.makeText(MapsActivity.this, "onMarkerDragEnd  --> " + getCompleteAddressString(latitude,longitude), Toast.LENGTH_SHORT).show();
+        endLatitude = marker.getPosition().latitude;
+        endLongitude = marker.getPosition().longitude;
+        Toast.makeText(MapsActivity.this, "onMarkerDragEnd  --> " + getCompleteAddressString(endLatitude,endLongitude), Toast.LENGTH_SHORT).show();
 
         //move to current position
 
-        moveMap(longitude,latitude);
         getRoad(longitude,latitude,endLongitude,endLatitude);
 //        PolylineOptions options = new PolylineOptions();
 //        options.color(Color.CYAN);
@@ -454,8 +473,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public boolean onMarkerClick(Marker marker) {
         marker.setDraggable(true);
         marker.showInfoWindow();
-        marker.setTitle(Address);
-        currentLocationMarker = marker;
+        //currentLocationMarker = marker;
         Toast.makeText(MapsActivity.this, "onMarkerClick", Toast.LENGTH_SHORT).show();
         return true;
     }
